@@ -1,0 +1,44 @@
+---
+export interface Props {
+  link: string
+}
+
+const { link } = Astro.props
+---
+
+<pre
+  class="snippet">
+  <a href={link} target="_blank" rel="noopener noreferrer" class="snippet-link">
+    <code>{link} ↗</code>
+  </a>
+</pre>
+
+<style>
+  .snippet {
+    background-color: #262626;
+    color: #fff;
+    border-radius: 2rem;
+    font-family: 'Roboto Mono', monospace; /* Monospaced font for code look */
+    padding-right: 1.5rem;
+  }
+
+  .snippet-link {
+    display: inline-block;
+    color: #61dafb; /* Light blue for contrast, feel free to change */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    font-family: 'Bebas Neue', sans-serif; /* Use Bebas for the link */
+  }
+
+  .snippet-link:hover {
+    color: lightgray; /* Subtle hover effect */
+  }
+
+  /* Mobile styling (if needed) */
+  @media (max-width: 768px) {
+    .snippet {
+      font-size: 0.85rem;
+    }
+  }
+</style>

@@ -1,16 +1,17 @@
 ---
-
+import Snippet from '../components/ui/Snippet.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HomeLayout from '../layouts/HomeLayout.astro'
+const link = 'https://rdias-portfolio.vercel.app'
+const status = 'Meu novo portfolio/blog esta sob construção'
+const description =
+  'Enquanto isso, visite meu portfolio em funcionamento desenvolvido em Nextjs no link abaixo!'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <HomeLayout>
+    <h1>{status}</h1>
+    <code>{description}</code>
+    <Snippet link={link} />
+  </HomeLayout>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import Hamburger from './ui/Hamburger.astro'
+import Navigation from './ui/Navigation.astro'
+---
+
+<header class="header-nav">
+  <nav>
+    <Hamburger class="hamburger" />
+    <Navigation class="navigation" />
+  </nav>
+</header>
+
+<style>
+  /* Position header at the top */
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #262626; /* Or your desired header color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+  }
+
+  /* Hide navigation on small screens */
+  .navigation {
+    display: none;
+  }
+
+  /* Show hamburger by default (for small screens) */
+  .hamburger {
+    display: block;
+  }
+
+  /* Make adjustments for larger screens */
+  @media (min-width: 768px) {
+    .navigation {
+      display: flex; /* Or block, depending on how you styled your nav */
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+</style>
