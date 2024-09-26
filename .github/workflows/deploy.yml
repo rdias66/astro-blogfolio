@@ -59,22 +59,18 @@ jobs:
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
           known_hosts: ${{ secrets.SSH_HOST }}
 
-      - run:
-          name: Authenticate on AWS ECR over SSH
-          command: |
-            ssh  ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "aws ecr get-login-password --region sa-east-1 | sudo docker login --username AWS --password-stdin 891377290474.dkr.ecr.sa-east-1.amazonaws.com"
+      - name: Authenticate on AWS ECR over SSH
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "aws ecr get-login-password --region sa-east-1 | sudo docker login --username AWS --password-stdin 891377290474.dkr.ecr.sa-east-1.amazonaws.com"
 
-      - run:
-          name: Remove existing Docker container
-          command: |
-            ssh  ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker rm --force frontend_app_1 || true"
+      - name: Remove existing Docker container
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker rm --force frontend_app_1 || true"
 
-      - run:
-          name: Pull the latest Docker image
-          command: |
-            ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker pull 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
+      - name: Pull the latest Docker image
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker pull 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
 
-      - run:
-          name: Run the new Docker container
-          command: |
-            ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker run --name frontend_app_1 --network frontend --restart unless-stopped -d 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
+      - name: Run the new Docker container
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo docker run --name frontend_app_1 --network frontend --restart unless-stopped -d 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
