@@ -70,12 +70,17 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: sa-east-1
 
-      - name: Deploy over SSH
-        run: |
+    - name: Deploy over SSH
+         run: |
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST \
-          "sudo docker rm --force frontend_app_1; \
-           sudo docker pull 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest; \
-           sudo docker run --name frontend_app_1 --network frontend --restart unless-stopped -d 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
+          "aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin 891377290474.dkr.ecr.sa-east-1.amazonaws.com; \
+          sudo docker rm --force frontend_app_1; \
+          sudo docker pull 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest; \
+         sudo docker run --name frontend_app_1 --network frontend --restart unless-stopped -d 891377290474.dkr.ecr.sa-east-1.amazonaws.com/blogfolio/frontend:latest"
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: sa-east-1
+
