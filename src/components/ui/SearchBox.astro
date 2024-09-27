@@ -1,0 +1,63 @@
+---
+
+---
+
+<div class="search-overlay">
+  <div class="search-box">
+    <input
+      type="text"
+      class="search-bar"
+      placeholder="Isso ainda nao faz nada..."
+    />
+    <button class="close-button">❌</button>
+  </div>
+</div>
+
+<style>
+  .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hide by default */
+    justify-content: center;
+    margin-top: 3.1rem;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+  }
+
+  .active {
+    display: flex; /* Show when active */
+  }
+
+  .search-box {
+    background-color: #201e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 500px;
+    box-shadow: 0 1px 3px rgba(19, 207, 198, 0.2);
+  }
+
+  .search-bar {
+    border-radius: 2rem;
+    background-color: #444242;
+    padding: 0.5rem;
+    border: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .close-button {
+    padding: 0.5rem;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+</style>
