@@ -1,11 +1,8 @@
 ---
-const { class: customClass } = Astro.props
+
 ---
 
-<button
-  class={`hamburger-button ${customClass}`}
-  aria-label="Toggle navigation"
->
+<button class={`hamburger-button`}>
   <span class="bar"></span>
   <span class="bar"></span>
   <span class="bar"></span>
@@ -27,5 +24,9 @@ const { class: customClass } = Astro.props
     height: 2px;
     background-color: rgb(100, 94, 94);
     transition: all 0.3s ease;
+  }
+
+  .hamburger-button:hover .bar {
+    background-color: #ff6666;
   }
 </style>
