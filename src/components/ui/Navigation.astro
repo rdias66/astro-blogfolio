@@ -1,0 +1,42 @@
+<div class="nav-container">
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/info">Info</a>
+    <a href="/projets">Projetos</a>
+    <a href="/blog">Blog</a>
+  </div>
+</div>
+
+<style>
+  .nav-container {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0.2rem;
+    left: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #3b3a3a;
+    margin-left: 0.2rem;
+    z-index: 20;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .nav-links a {
+    border-bottom: solid 1px rgb(80, 78, 78);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a:hover {
+    color: #ff6666;
+  }
+</style>

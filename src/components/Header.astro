@@ -1,48 +1,28 @@
 ---
 import Hamburger from './ui/Hamburger.astro'
-import Navigation from './ui/Navigation.astro'
+import Search from './Search.astro'
+import Socials from './Socials.astro'
 ---
 
 <header class="header-nav">
-  <nav>
-    <Hamburger class="hamburger" />
-    <Navigation class="navigation" />
-  </nav>
+  <Hamburger />
+
+  <Search />
+  <Socials class="socials" />
 </header>
 
 <style>
-  /* Position header at the top */
   .header-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #262626; /* Or your desired header color */
+    background-color: #262626;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     z-index: 10;
-  }
-
-  /* Hide navigation on small screens */
-  .navigation {
-    display: none;
-  }
-
-  /* Show hamburger by default (for small screens) */
-  .hamburger {
-    display: block;
-  }
-
-  /* Make adjustments for larger screens */
-  @media (min-width: 768px) {
-    .navigation {
-      display: flex; /* Or block, depending on how you styled your nav */
-    }
-
-    .hamburger {
-      display: none;
-    }
+    justify-content: space-between;
+    max-height: 3rem;
   }
 </style>
