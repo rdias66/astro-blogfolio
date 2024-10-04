@@ -1,22 +1,23 @@
 ---
-import LeftContent from '../components/home/LeftContent.astro'
-import RightContent from '../components/home/RightContent.astro'
-import Snippet from '../components/ui/Snippet.astro'
+import LeftContentLayout from '../layouts/LeftContentLayout.astro'
+import RightContentLayout from '../layouts/RightContentLayout.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import HomeLayout from '../layouts/HomeLayout.astro'
-const link = 'https://rdias-portfolio.vercel.app'
-const status = 'Meu novo portfolio/blog está sob construção'
-const description =
-  'Enquanto isso, visite meu portfolio em funcionamento desenvolvido em Nextjs no link abaixo!'
+import Intro from '../components/ui/Intro.astro'
+import Navigation from '../components/ui/Navigation.astro'
+import Socials from '../components/general/Socials.astro'
+import About from '../components/home/About.astro'
 ---
 
 <BaseLayout>
   <HomeLayout>
-    <slot name="left">
-      <LeftContent />
-    </slot>
-    <slot name="right">
-      <RightContent />
-    </slot>
+    <LeftContentLayout slot="left">
+      <Intro slot="intro" />
+      <Navigation slot="navigation" />
+      <Socials slot="socials" />
+    </LeftContentLayout>
+    <RightContentLayout slot="right">
+      <About slot="about" />
+    </RightContentLayout>
   </HomeLayout>
 </BaseLayout>
