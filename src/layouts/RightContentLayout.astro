@@ -1,0 +1,36 @@
+---
+
+---
+
+<div class="right-content">
+  <div class="scrollable-content">
+    <slot name="about" />
+    <slot name="projects" />
+    <slot name="blog" />
+    <slot name="contact" />
+  </div>
+</div>
+
+<style>
+  .right-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scrollable-content {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollable-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollable-content {
+    scroll-behavior: smooth;
+  }
+</style>
