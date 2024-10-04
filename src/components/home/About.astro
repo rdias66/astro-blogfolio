@@ -5,6 +5,7 @@ const aboutText = ''
 
 <div id="info" class="about-container">
   <Avatar size="100px" shape="circle" />
+  <div class="separator"></div>
   <code class="about-text">
     Em 2020, eu me sentia insatisfeito com minha escolha de carreira, cursando
     Engenharia Elétrica. Enquanto desabafava com um amigo sobre essa frustração,
@@ -31,11 +32,11 @@ const aboutText = ''
     text-align: center;
     padding: 2rem;
   }
-
-  .full-name {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    color: white;
+  .separator {
+    width: 75%;
+    border-top: 1px solid white;
+    margin: 20px 0;
+    border-color: var(--primary-color);
   }
 
   .about-text {
