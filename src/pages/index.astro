@@ -7,6 +7,9 @@ import Intro from '../components/ui/Intro.astro'
 import Navigation from '../components/ui/Navigation.astro'
 import Socials from '../components/general/Socials.astro'
 import About from '../components/home/About.astro'
+import Projects from '../components/home/Projects.astro'
+import Blog from '../components/home/Blog.astro'
+import Contact from '../components/home/Contact.astro'
 ---
 
 <BaseLayout>
@@ -18,6 +21,9 @@ import About from '../components/home/About.astro'
     </LeftContentLayout>
     <RightContentLayout slot="right">
       <About slot="about" />
+      <Projects slot="projects" />
+      <Blog slot="blog" />
+      <Contact slot="contact" />
     </RightContentLayout>
   </HomeLayout>
 </BaseLayout>
