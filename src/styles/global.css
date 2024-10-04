@@ -12,6 +12,8 @@
   --header-color: #262626;
   --primary-color: #ff6666;
   --secondary-color:#c926c1 ;
+  --text-primary: white;
+  --text-secondary: rgba(255, 255, 255, 0.644);
   --font-color: white;
   --max-content-width: 1600px; 
   --padding: 1.5rem;
@@ -66,4 +68,14 @@ header a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 42px;
+}
+
+.sub-title{
+  color: var(--text-secondary);
+  font-size: 18px;
 }
