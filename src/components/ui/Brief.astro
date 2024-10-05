@@ -1,19 +1,19 @@
 ---
 const name = 'Rodrigo Dias'
-const title = 'Full Stack Developer'
+const title = 'Desenvolvedor Full Stack'
 const description =
-  'Eu construo e mantenho aplicações full stack, atualmente focando em DevOps e IaC. Também escrevo um blog com tutoriais de desenvolvimento e insights!'
+  'Eu construo e mantenho aplicações full stack, atualmente focando em DevOps e IaC.'
 ---
 
-<div class="intro">
-  <h1>{name}</h1>
-  <h2>{title}</h2>
-  <p>{description}</p>
+<div class="brief">
+  <code class="title">{name}</code>
+  <code class="sub-title">{title}</code>
+  <code class="description">{description}</code>
 </div>
 
 <style>
-  .intro {
-    max-width: 80%;
+  .brief {
+    max-width: 120%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -29,10 +29,11 @@ const description =
     font-size: 18px;
   }
 
-  p {
+  .description {
     margin-top: 10%;
     color: lightcoral;
-    font-size: 16px;
+
     text-align: start;
+    max-width: 60%;
   }
 </style>
