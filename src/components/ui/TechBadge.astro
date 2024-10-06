@@ -1,0 +1,22 @@
+---
+// Props passed to the component
+const { techName } = Astro.props
+---
+
+<div class="tech-badge">
+  <code>{techName}</code>
+</div>
+
+<style>
+  .tech-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    background-color: #f9fafb;
+    font-weight: 500;
+    line-height: 1;
+  }
+</style>

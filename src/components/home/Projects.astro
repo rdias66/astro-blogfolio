@@ -1,5 +1,89 @@
 ---
-
+import projects from '../../content/projects.js'
+import ProjectCard from '../ui/ProjectCard.astro'
 ---
 
-<div id="projects">this will be projects section</div>
+<div class="margin-top5">
+  <code class="sub-title">Projetos</code>
+  <section id="projects" class="projects-section">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          projectTitle={project.projectTitle}
+          projectDescription={project.projectDescription}
+          techStack={project.techStack}
+          liveLink={project.liveLink}
+          githubLink={project.githubLink}
+          projectImage={project.projectImage}
+        />
+      ))
+    }
+  </section>
+</div>
+
+<style>
+  .margin-top5 {
+    margin-top: 5rem;
+  }
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .image-section {
+    margin-bottom: 1rem;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc; /* Light title */
+  }
+
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d1d5db; /* Subtle text color */
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-stack > * {
+    background-color: #0f172a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .links a {
+    color: #38bdf8; /* Link color */
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
