@@ -1,5 +1,126 @@
 ---
-
+import projects from '../../content/projects.js'
+import TechBadge from '../ui/TechBadge.astro'
 ---
 
-<div id="projects">this will be projects section</div>
+<code class="sub-title">Projetos</code>
+<section class="projects-section">
+  {
+    projects.map((project) => (
+      <div class="project-card">
+        <div class="image-section">
+          <img src={project.projectImage} alt={project.projectTitle} />
+        </div>
+        <div class="content-section">
+          <code class="project-title">{project.projectTitle}</code>
+          <code class="project-description">{project.projectDescription}</code>
+          <div class="tech-stack">
+            {project.techStack.map((tech) => (
+              <TechBadge techName={tech} />
+            ))}
+          </div>
+          <div class="links">
+            {project.githubLink !== 'Private' && (
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <code>Github</code>
+              </a>
+            )}
+            {project.liveLink && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <code>Live</code>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  .projects-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .project-card {
+    background-color: #1e293b; /* Dark card background */
+    color: #f8fafc; /* Light text */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Lift effect */
+  }
+
+  .image-section {
+    margin-bottom: 1rem;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc; /* Light title */
+  }
+
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d1d5db; /* Subtle text color */
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-stack > * {
+    background-color: #0f172a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .links a {
+    color: #38bdf8; /* Link color */
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
