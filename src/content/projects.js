@@ -16,30 +16,9 @@ const projects = [
       'CircleCI',
     ],
     liveLink: 'https://mectatsch.com',
-    githubRepo: 'Private',
-    projectImage:
-      'https://raw.githubusercontent.com/rdias66/astro-blogfolio-assets/refs/heads/main/images/projects/home-full%2Bmobile.png',
-  },
-  {
-    projectTitle: 'Fit Experience Mobile',
-    projectDescription:
-      'App de gerenciamento de treinos e clientes para usuários comuns e treinadores.',
-    techStack: [
-      'Nestjs',
-      'Prisma',
-      'Postgresql',
-      'MongoDB',
-      'Expo',
-      'NativecnUI',
-      'AWS',
-      'OpenTofu',
-      'Docker',
-      'CircleCI',
-    ],
-    liveLink: 'Google Play Store link em breve',
     githubLink: 'Private',
     projectImage:
-      'https://raw.githubusercontent.com/rdias66/astro-blogfolio-assets/refs/heads/main/images/projects/fit-xp-login%2Bwelcome.png',
+      'https://raw.githubusercontent.com/rdias66/astro-blogfolio-assets/refs/heads/main/images/projects/home-full%2Bmobile.png',
   },
   {
     projectTitle: 'Fit Experience Landing',

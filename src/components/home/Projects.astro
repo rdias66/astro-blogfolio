@@ -1,72 +1,35 @@
 ---
 import projects from '../../content/projects.js'
-import TechBadge from '../ui/TechBadge.astro'
+import ProjectCard from '../ui/ProjectCard.astro'
 ---
 
-<code class="sub-title">Projetos</code>
-<section class="projects-section">
-  {
-    projects.map((project) => (
-      <div class="project-card">
-        <div class="image-section">
-          <img src={project.projectImage} alt={project.projectTitle} />
-        </div>
-        <div class="content-section">
-          <code class="project-title">{project.projectTitle}</code>
-          <code class="project-description">{project.projectDescription}</code>
-          <div class="tech-stack">
-            {project.techStack.map((tech) => (
-              <TechBadge techName={tech} />
-            ))}
-          </div>
-          <div class="links">
-            {project.githubLink !== 'Private' && (
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <code>Github</code>
-              </a>
-            )}
-            {project.liveLink && (
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <code>Live</code>
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
-    ))
-  }
-</section>
+<div class="margin-top5">
+  <code class="sub-title">Projetos</code>
+  <section id="projects" class="projects-section">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          projectTitle={project.projectTitle}
+          projectDescription={project.projectDescription}
+          techStack={project.techStack}
+          liveLink={project.liveLink}
+          githubLink={project.githubLink}
+          projectImage={project.projectImage}
+        />
+      ))
+    }
+  </section>
+</div>
 
 <style>
+  .margin-top5 {
+    margin-top: 5rem;
+  }
   .projects-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding: 2rem;
-  }
-
-  .project-card {
-    background-color: #1e293b; /* Dark card background */
-    color: #f8fafc; /* Light text */
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-
-  .project-card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Lift effect */
   }
 
   .image-section {
