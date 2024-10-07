@@ -4,8 +4,8 @@ import ProjectCard from '../ui/ProjectCard.astro'
 ---
 
 <div class="margin-top5">
-  <code class="sub-title">Projetos</code>
   <section id="projects" class="projects-section">
+    <code class="sub-title">Projetos</code>
     {
       projects.map((project) => (
         <ProjectCard
@@ -24,6 +24,9 @@ import ProjectCard from '../ui/ProjectCard.astro'
 <style>
   .margin-top5 {
     margin-top: 5rem;
+  }
+  code {
+    text-align: center;
   }
   .projects-section {
     display: flex;

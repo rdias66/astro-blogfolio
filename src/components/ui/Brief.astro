@@ -20,20 +20,15 @@ const description =
     align-items: start;
   }
 
-  h1 {
-    color: white;
-    font-size: 56px;
-  }
-  h2 {
-    color: whitesmoke;
-    font-size: 18px;
-  }
-
   .description {
     margin-top: 10%;
     color: lightcoral;
-
     text-align: start;
-    max-width: 60%;
+    max-width: 80%;
+  }
+  @media (min-width: 769px) {
+    .description {
+      max-width: 60%;
+    }
   }
 </style>

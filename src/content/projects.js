@@ -33,7 +33,7 @@ const projects = [
   {
     projectTitle: 'Portfolio V1',
     projectDescription: 'Meu primeiro portfolio desenvolvido em Nextjs',
-    techStack: ['Nextjs', 'Vercel'],
+    techStack: ['Nextjs', 'Vercel', 'TailwindCSS', 'ShadcnUI'],
     liveLink: 'https://rdias-portfolio.vercel.app',
     githubLink: 'https://github.com/rdias66/next-portfolio',
     projectImage:
