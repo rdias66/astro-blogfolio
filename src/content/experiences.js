@@ -1,6 +1,6 @@
 const experiences = [
   {
-    year: '4/2024 - ongoing',
+    year: '4/2024 - em andamento',
     title: 'Desenvolvedor Full Stack Independente - mectatsch.com',
     desc: 'App de controle de dados privado para uma Oficina Mecanica. Como desenvolvedor solo, cumpri os papeis de desenvolvimento, publicação e manutenção em sua integridade.',
     techStack: [
@@ -17,8 +17,8 @@ const experiences = [
     ],
   },
   {
-    year: '1/2024 - ongoing',
-    title: 'Full Stack Developer - Fit-Experience',
+    year: '1/2024 - em andamento',
+    title: 'Desenvolvedor Full Stack - Fit-Experience',
     desc: 'Contribuí no backend com funcionamento e planejamento das rotas de email automatizado e conquistas para os usuários. Mobile com componentes isolados. E DevOps com o planejamento e execução do deploy backend(aws) e na publicação na Google Store.',
     techStack: [
       'Nestjs',
@@ -39,7 +39,7 @@ const experiences = [
     year: '12/2022 - 1/2024',
     title: 'Estagiário - Copel CSL',
     desc: 'Redirecionamento digital e controle de dados de manutenção de equipamentos elétricos. Script desenvolvido para automatizacao de verificação de manutenções vencidas em religadores.',
-    techStack: ['JavaScript'],
+    techStack: ['JavaScript', 'Excel', 'Power BI'],
   },
   {
     year: '4/2022 - 4/2024',

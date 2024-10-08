@@ -5,10 +5,10 @@ const { year, title, desc, techStack } = Astro.props
 ---
 
 <div class="experience-card">
-  <div class="year">
-    {year}
-  </div>
   <div class="content-section">
+    <div class="year">
+      <code>{year}</code>
+    </div>
     <code class="sub-title">{title}</code>
     <code class="description-color">{desc}</code>
     <div class="tech-stack">
@@ -25,13 +25,48 @@ const { year, title, desc, techStack } = Astro.props
     width: 90%;
     margin: 1rem auto;
     padding: 1.5rem;
-    background-color: #141414;
+    background-color: #1d1c1c;
     border-radius: 0.4rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
-    color: #f8fafc; /* Light text color */
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .experience-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      130deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 40%,
+      transparent 60%,
+      transparent 100%
+    );
+    transform: translateX(-100%) rotate(45deg);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .experience-card:hover::before {
+    opacity: 1;
+    animation: subtle-shine 1s ease-out forwards;
+  }
+
+  @keyframes subtle-shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
   }
 
   .description-color {
