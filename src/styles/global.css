@@ -22,15 +22,8 @@
 html, body {
   height: 100%;
   background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   max-width: var(--max-content-width);
-  width: 100%;
   margin: 0 auto;
-  padding: var(--padding);
-  scroll-behavior: smooth;
 }
 
 p, li, body {

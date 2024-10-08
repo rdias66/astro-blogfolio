@@ -9,6 +9,7 @@ import Socials from '../components/general/Socials.astro'
 import Intro from '../components/home/Intro.astro'
 import Projects from '../components/home/Projects.astro'
 import Blog from '../components/home/Blog.astro'
+import Experiences from '../components/home/Experiences.astro'
 ---
 
 <BaseLayout>
@@ -20,6 +21,7 @@ import Blog from '../components/home/Blog.astro'
     </LeftContentLayout>
     <RightContentLayout slot="right">
       <Intro slot="about" />
+      <Experiences slot="experiences" />
       <Projects slot="projects" />
       <Blog slot="blog" />
     </RightContentLayout>
