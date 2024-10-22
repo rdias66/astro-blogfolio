@@ -3,10 +3,18 @@
 ---
 
 <div class="nav-links">
-  <a href="#info" class="nav-link" onclick="setActive(this)">About</a>
-  <a href="#projects" class="nav-link" onclick="setActive(this)">Projects</a>
-  <a href="#blog" class="nav-link" onclick="setActive(this)">Blog</a>
-  <a href="#contact" class="nav-link" onclick="setActive(this)">Contato</a>
+  <a href="#intro" class="nav-link" onclick="setActive(this)"
+    ><code>Intro</code></a
+  >
+  <a href="#experiences" class="nav-link" onclick="setActive(this)"
+    ><code>Experiências</code></a
+  >
+  <a href="#projects" class="nav-link" onclick="setActive(this)"
+    ><code>Projetos</code></a
+  >
+  <a href="#blog" class="nav-link" onclick="setActive(this)"
+    ><code>Blog</code></a
+  >
 </div>
 
 <style>
@@ -25,6 +33,10 @@
     transition:
       color 0.3s ease,
       transform 0.3s ease;
+  }
+
+  code {
+    font-size: 18px;
   }
 
   .nav-link::after {

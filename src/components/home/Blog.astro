@@ -2,4 +2,77 @@
 
 ---
 
-<div id="blog">this will blog section</div>
+<div id="blog">
+  <div class="center">
+    <code class="title"
+      >Visite meu <a href="">
+        <code class="shiny-text">Blog aqui ↗</code></a
+      ></code
+    >
+    <code class="subtle">quando ele estiver pronto :)</code>
+  </div>
+</div>
+
+<style>
+  .center {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .subtle {
+    color: var(--text-secondary);
+  }
+
+  .shiny-text {
+    display: inline-block;
+    background: linear-gradient(
+      90deg,
+      #f72585,
+      #7209b7,
+      #0ca364,
+      #4361ee,
+      #4cc9f0,
+      #e7ca21
+    );
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shiny 4s linear infinite;
+  }
+
+  .shiny-text:hover {
+    animation: colorChange 5s linear infinite;
+  }
+
+  @keyframes shiny {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: #f72585;
+    }
+    20% {
+      color: #7209b7;
+    }
+    40% {
+      color: #0ca364;
+    }
+    60% {
+      color: #4361ee;
+    }
+    80% {
+      color: #4cc9f0;
+    }
+    100% {
+      color: #e7ca21;
+    }
+  }
+</style>

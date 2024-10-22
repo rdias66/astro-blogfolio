@@ -3,27 +3,27 @@ import LeftContentLayout from '../layouts/LeftContentLayout.astro'
 import RightContentLayout from '../layouts/RightContentLayout.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import HomeLayout from '../layouts/HomeLayout.astro'
-import Intro from '../components/ui/Intro.astro'
+import Brief from '../components/ui/Brief.astro'
 import Navigation from '../components/ui/Navigation.astro'
 import Socials from '../components/general/Socials.astro'
-import About from '../components/home/About.astro'
+import Intro from '../components/home/Intro.astro'
 import Projects from '../components/home/Projects.astro'
 import Blog from '../components/home/Blog.astro'
-import Contact from '../components/home/Contact.astro'
+import Experiences from '../components/home/Experiences.astro'
 ---
 
 <BaseLayout>
   <HomeLayout>
     <LeftContentLayout slot="left">
-      <Intro slot="intro" />
+      <Brief slot="brief" />
       <Navigation slot="navigation" />
       <Socials slot="socials" />
     </LeftContentLayout>
     <RightContentLayout slot="right">
-      <About slot="about" />
+      <Intro slot="about" />
+      <Experiences slot="experiences" />
       <Projects slot="projects" />
       <Blog slot="blog" />
-      <Contact slot="contact" />
     </RightContentLayout>
   </HomeLayout>
 </BaseLayout>

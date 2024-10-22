@@ -1,20 +1,18 @@
 ---
-import projects from '../../content/projects.js'
-import ProjectCard from '../ui/ProjectCard.astro'
+import experiences from '../../content/experiences.js'
+import ExperienceCard from '../ui/ExperienceCard.astro'
 ---
 
 <div class="margin-top5">
-  <section id="projects" class="projects-section">
-    <code class="sub-title">Projetos</code>
+  <section id="experiences" class="experiences-section">
+    <code class="sub-title">Experiências</code>
     {
-      projects.map((project) => (
-        <ProjectCard
-          projectTitle={project.projectTitle}
-          projectDescription={project.projectDescription}
-          techStack={project.techStack}
-          liveLink={project.liveLink}
-          githubLink={project.githubLink}
-          projectImage={project.projectImage}
+      experiences.map((experience) => (
+        <ExperienceCard
+          year={experience.year}
+          title={experience.title}
+          desc={experience.desc}
+          techStack={experience.techStack}
         />
       ))
     }
@@ -28,7 +26,7 @@ import ProjectCard from '../ui/ProjectCard.astro'
   code {
     text-align: center;
   }
-  .projects-section {
+  .experiences-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;

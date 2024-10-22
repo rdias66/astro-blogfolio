@@ -1,0 +1,34 @@
+---
+const name = 'Rodrigo Dias'
+const title = 'Desenvolvedor Full Stack'
+const description =
+  'Eu construo e mantenho aplicações full stack, atualmente focando em DevOps e IaC.'
+---
+
+<div class="brief">
+  <code class="title">{name}</code>
+  <code class="sub-title">{title}</code>
+  <code class="description">{description}</code>
+</div>
+
+<style>
+  .brief {
+    max-width: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .description {
+    margin-top: 10%;
+    color: lightcoral;
+    text-align: start;
+    max-width: 80%;
+  }
+  @media (min-width: 769px) {
+    .description {
+      max-width: 60%;
+    }
+  }
+</style>

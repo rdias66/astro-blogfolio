@@ -1,0 +1,135 @@
+---
+import TechBadge from './TechBadge.astro'
+
+const {
+  projectTitle,
+  projectDescription,
+  techStack,
+  liveLink,
+  githubLink,
+  projectImage,
+} = Astro.props
+---
+
+<div class="project-card">
+  <div class="image-section">
+    <img src={projectImage} alt={projectTitle} />
+  </div>
+  <div class="content-section">
+    <code class="sub-title">{projectTitle}</code>
+    <code class="description-color">{projectDescription}</code>
+    <div class="links">
+      {
+        githubLink === 'Private' ? (
+          <code class="disabled">Github 🔒</code>
+        ) : (
+          githubLink && (
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              <code>Github 🔓 ↗</code>
+            </a>
+          )
+        )
+      }
+      {
+        liveLink && (
+          <a href={liveLink} target="_blank" rel="noopener noreferrer">
+            <code>Link ↗</code>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: #141414;
+    border-radius: 0.4rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    color: #f8fafc; 
+    box-shadow:
+        -0.5px -1px 5px rgba(63, 63, 63, 0.3),
+        3px 6px var(--primary-color); 
+    }
+  }
+
+  .image-section {
+    width: 100%;
+    max-width: 30%; 
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0; 
+  }
+
+  .description-color {
+    color: var(--primary-color);
+    text-align: start;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+
+  .disabled {
+    color: var(--text-secondary)
+  }
+
+
+  @media (min-width: 769px) {
+    .project-card {
+      flex-direction: row; 
+      align-items: center; 
+      max-width: 90%;
+      box-shadow: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-0.5rem);
+      box-shadow:
+        -0.5px -1px 5px rgba(63, 63, 63, 0.3),
+        3px 6px var(--primary-color);
+    }
+
+    .image-section {
+      max-width: 30%; 
+    }
+
+    .content-section {
+      padding-left: 1.5rem;
+      flex: 2; 
+    }
+  }
+</style>

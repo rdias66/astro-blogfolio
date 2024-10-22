@@ -1,0 +1,48 @@
+---
+import Avatar from '../ui/Avatar.astro'
+---
+
+<div id="intro" class="about-container">
+  <Avatar size="100px" shape="circle" />
+  <div class="separator"></div>
+  <code class="about-text">
+    Em 2020, eu me sentia insatisfeito com minha escolha de carreira, cursando
+    Engenharia Elétrica. Enquanto desabafava com um amigo sobre essa frustração,
+    recebi um convite inesperado para ajudá-lo no desenvolvimento de um site.
+    Aquele momento mudou minha vida. Desde então, dia após dia, mergulhei cada
+    vez mais no mundo do código, projeto após projeto, assumindo novos desafios.
+    Minha trajetória foi se construindo a partir de diferentes áreas: desde o
+    planejamento de bancos de dados e backends, desenvolvimento de frontends
+    orientados a conteúdo (como este site), até a criação de infraestruturas
+    completas para deploys. Com o tempo, me desenvolvi como profissional e hoje
+    tenho a satisfação de me considerar um Desenvolvedor Full Stack Júnior.Sou
+    apaixonado por aprender e, como descobri em outras experiências, também
+    adoro compartilhar conhecimento. Por isso, este blogfolio não será apenas
+    uma versão estilizada do meu currículo, mas também um espaço com tutoriais,
+    insights e informações que me ajudaram na minha jornada como desenvolvedor.
+    Seja bem-vindo!
+  </code>
+</div>
+<style>
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .separator {
+    width: 75%;
+    border-top: 1px solid white;
+    margin: 20px 0;
+    border-color: var(--primary-color);
+  }
+
+  .about-text {
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 0.9rem;
+    color: white;
+    max-width: 600px;
+  }
+</style>
