@@ -3,12 +3,18 @@ const name = 'Rodrigo Dias'
 const title = 'Desenvolvedor Full Stack'
 const description =
   'Eu construo e mantenho aplicações full stack, atualmente focando em DevOps e IaC.'
+
+const cvLink =
+  'https://github.com/rdias66/astro-blogfolio-assets/blob/main/cv/Rodrigo-Dias-CV-PTBR.pdf'
 ---
 
 <div class="brief">
   <code class="title">{name}</code>
   <code class="sub-title">{title}</code>
   <code class="description">{description}</code>
+  <a href={cvLink} target="_blank">
+    <code class="brief-link">Currículo ↗</code></a
+  >
 </div>
 
 <style>
@@ -25,6 +31,21 @@ const description =
     color: lightcoral;
     text-align: start;
     max-width: 80%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .brief-link {
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .brief-link:hover {
+    color: lightcoral;
   }
   @media (min-width: 769px) {
     .description {
