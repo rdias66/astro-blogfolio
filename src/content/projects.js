@@ -25,6 +25,15 @@ const projects = [
     projectImage:
       'https://github.com/rdias66/astro-blogfolio-assets/blob/main/images/projects/next-portfolio.png?raw=true',
   },
+  {
+    projectTitle: 'Blog profissional',
+    projectDescription:
+      'Meu blog profissional onde faço conteudo didático de DevOps e full stack em geral',
+    liveLink: 'https://blog.rdias66.codes',
+    githubLink: 'https://github.com/rdias66/astro-blog',
+    projectImage:
+      'https://github.com/rdias66/astro-blogfolio-assets/blob/main/images/projects/astro-blog.png?raw=true',
+  },
 ]
 
 export default projects
