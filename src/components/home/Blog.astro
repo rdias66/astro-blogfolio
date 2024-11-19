@@ -3,29 +3,21 @@ const blogLink = 'https://blog.rdias66.codes'
 ---
 
 <div id="blog">
-  <div class="center">
-    <code class="title"
-      >Visite meu <a href={blogLink} target="_blank">
-        <code class="shiny-text">Blog aqui ↗</code></a
-      ></code
-    >
+  <div class="container">
+    <code class="description">
+      Explore conteúdos sobre tecnologia, programação e projetos pessoais no meu <strong
+        >Blog profissional</strong
+      >.
+    </code>
+    <a href={blogLink} target="_blank" class="cta">
+      <code class="shiny-text">Visite o Blog aqui ↗</code>
+    </a>
   </div>
 </div>
 
 <style>
-  .center {
-    text-align: center;
-  }
-  a {
-    text-decoration: none;
-  }
-  .subtle {
-    color: var(--text-secondary);
-  }
-
-  .shiny-text {
-    display: inline-block;
-    background: linear-gradient(
+  :root {
+    --gradient-colors: linear-gradient(
       90deg,
       #f72585,
       #7209b7,
@@ -34,15 +26,60 @@ const blogLink = 'https://blog.rdias66.codes'
       #4cc9f0,
       #e7ca21
     );
+  }
+
+  #blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    background: #101010; /* Optional: Add background color for contrast */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .description {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #f8fafc;
+    line-height: 1.6;
+  }
+
+  .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    background: #eb8bb6;
     background-size: 300%;
+    animation: shiny 4s linear infinite;
+    transition: transform 0.2s;
+  }
+
+  .cta:hover {
+    transform: scale(1.05);
+  }
+
+  .shiny-text {
+    background: var(--gradient-colors);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: shiny 4s linear infinite;
-  }
-
-  .shiny-text:hover {
-    animation: colorChange 5s linear infinite;
   }
 
   @keyframes shiny {
@@ -51,27 +88,6 @@ const blogLink = 'https://blog.rdias66.codes'
     }
     100% {
       background-position: 100%;
-    }
-  }
-
-  @keyframes colorChange {
-    0% {
-      color: #f72585;
-    }
-    20% {
-      color: #7209b7;
-    }
-    40% {
-      color: #0ca364;
-    }
-    60% {
-      color: #4361ee;
-    }
-    80% {
-      color: #4cc9f0;
-    }
-    100% {
-      color: #e7ca21;
     }
   }
 </style>
