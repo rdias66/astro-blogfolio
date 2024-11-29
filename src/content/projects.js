@@ -1,5 +1,15 @@
 const projects = [
   {
+    projectTitle: 'Fit Experience App',
+    projectDescription:
+      'Um projeto nos padroes CRUD para cadastro e gerenciamento de clientes, veículos, fornecedores, peças e orçamentos. O projeto é privado e depende de credenciais. Caso queira testar entre em contato comigo!',
+    liveLink:
+      'https://play.google.com/store/apps/details?id=com.fitexperience.fitexperience',
+    githubLink: 'Private',
+    projectImage:
+      'https://github.com/rdias66/astro-blogfolio-assets/blob/main/images/projects/fitxpapp.png?raw=true',
+  },
+  {
     projectTitle: 'WebApp de Gerenciamento de oficina mecânica',
     projectDescription:
       'Um projeto nos padroes CRUD para cadastro e gerenciamento de clientes, veículos, fornecedores, peças e orçamentos. O projeto é privado e depende de credenciais. Caso queira testar entre em contato comigo!',
