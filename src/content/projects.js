@@ -2,7 +2,7 @@ const projects = [
   {
     projectTitle: 'Fit Experience App',
     projectDescription:
-      'Um projeto nos padroes CRUD para cadastro e gerenciamento de clientes, veículos, fornecedores, peças e orçamentos. O projeto é privado e depende de credenciais. Caso queira testar entre em contato comigo!',
+      'Aplicativo de controle, gerenciamento e redirecionamento de treinos e exercicios para treinadores e usuarios comuns.',
     liveLink:
       'https://play.google.com/store/apps/details?id=com.fitexperience.fitexperience',
     githubLink: 'Private',
