@@ -1,9 +1,14 @@
 ---
-import Avatar from '../ui/Avatar.astro'
+const avatarUrl =
+  'https://avatars.githubusercontent.com/u/88790315?s=400&u=aed260e1a6db4ea2d6136dc7b50e2a49afb6f9d2&v=4'
+const alt = 'Github user profile picture'
+
 ---
 
 <div id="intro" class="about-container">
-  <Avatar size="100px" shape="circle" />
+  <div class="avatar">
+    <img src={avatarUrl} alt={alt} />
+  </div>
   <div class="separator"></div>
   <code class="about-text">
     Em 2020, eu me sentia insatisfeito com minha escolha de carreira, cursando
@@ -44,5 +49,24 @@ import Avatar from '../ui/Avatar.astro'
     font-size: 0.9rem;
     color: white;
     max-width: 600px;
+  }
+ .avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: var(--avatar-shape);
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  :root {
+    --avatar-size: 150px;
+    --avatar-shape: 50%;
   }
 </style>
