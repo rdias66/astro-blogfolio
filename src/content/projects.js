@@ -10,15 +10,6 @@ const projects = [
       'https://github.com/rdias66/astro-blogfolio-assets/blob/main/images/projects/fitxpapp.png?raw=true',
   },
   {
-    projectTitle: 'WebApp de Gerenciamento de oficina mecânica',
-    projectDescription:
-      'Um projeto nos padroes CRUD para cadastro e gerenciamento de clientes, veículos, fornecedores, peças e orçamentos. O projeto é privado e depende de credenciais. Caso queira testar entre em contato comigo!',
-    liveLink: 'https://mectatsch.com',
-    githubLink: 'Private',
-    projectImage:
-      'https://raw.githubusercontent.com/rdias66/astro-blogfolio-assets/refs/heads/main/images/projects/home-full%2Bmobile.png',
-  },
-  {
     projectTitle: 'Fit Experience Landing',
     projectDescription:
       'Landing page requerida pelo Google para deploy do app na loja, ainda em andamento',
