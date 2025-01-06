@@ -17,23 +17,6 @@ const experiences = [
     ],
   },
   {
-    year: '4/2024 - 10/2024',
-    title: 'Desenvolvedor Full Stack Independente - mectatsch.com',
-    desc: 'App de controle de dados privado para uma Oficina Mecanica. Como desenvolvedor solo, cumpri os papeis de desenvolvimento, publicação e manutenção em sua integridade.',
-    techStack: [
-      'Nestjs',
-      'Prisma',
-      'Postgresql',
-      'Nextjs',
-      'TailwindCSS',
-      'ShadcnUI',
-      'OpenTofu',
-      'AWS',
-      'Docker',
-      'CircleCI',
-    ],
-  },
-  {
     year: '1/2024 - 11/2024',
     title: 'Desenvolvedor Full Stack - Fit-Experience',
     desc: 'Contribuí no backend com funcionamento e planejamento das rotas de email automatizado e conquistas para os usuários. Mobile com componentes isolados. E DevOps com o planejamento e execução do deploy backend(aws) e na publicação na Google Store.',
